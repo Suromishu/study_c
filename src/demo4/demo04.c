@@ -12,13 +12,14 @@ void shell_sort(int *array, const int length)
         {
             for (int j = i + gap; j < length; j += gap)
             {
-                int temp = *(array + j);
-                while (*(array + j - gap) >= temp)
+                const int temp = *(array + j);
+                int k = j;
+                while (*(array + k - gap) > temp  && k >= gap)
                 {
-                    *(array + j) = *(array + j - gap);
-                    j -= gap;
+                    *(array + k) = *(array + k - gap);
+                    k -= gap;
                 }
-                *(array + j) = temp;
+                *(array + k) = temp;
             }
         }
     }
