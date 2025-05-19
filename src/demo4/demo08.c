@@ -2,6 +2,8 @@
 // Created by Mishu on 2025/5/16.
 //
 
+#include <stdio.h>
+#include <stdlib.h>
 
 int compare(const void* a, const void* b);
 int max_count_num(const int *array, int length);
@@ -18,7 +20,7 @@ int main()
 
 int compare(const void* a, const void* b)
 {
-    return (*(int*)a - *(int*)b);
+    return *(int*)a - *(int*)b;
 }
 
 int max_count_num(const int *array, const int length)
@@ -27,7 +29,7 @@ int max_count_num(const int *array, const int length)
     int count_num = array[0];
     for (int i = 0; i < length;)
     {
-        int current = array[i];
+        const int current = array[i];
         int count = 0;
         while (i < length && array[i] == current)
         {
