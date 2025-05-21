@@ -3,6 +3,7 @@
 //
 
 #include <stdio.h>
+#include <string.h>
 
 char *my_strcpy(char *dest, const char *src)
 {
@@ -33,5 +34,10 @@ int main()
     char *test2 = my_strcat(str2, str1);
     printf("%s\n", str2);
     printf("%s\n", test2);
+
+    char *test3 = strcat(str2, str1);
+    printf("%s\n", str2);
+    printf("%s\n", test3);
+
     return 0;
 }
