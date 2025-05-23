@@ -7,7 +7,8 @@
 int compare(const void* a, const void* b);
 int target_num(const int *array, const int length);
 
-int find_number(int* array, const int length) {
+int find_number(int* array, const int length)
+{
     const int len = length;
 
     qsort(array, len, sizeof(int), compare);
@@ -17,7 +18,7 @@ int find_number(int* array, const int length) {
 
 int compare(const void* a, const void* b)
 {
-    return (*(int*)a - *(int*)b);
+    return *(int*)a - *(int*)b;
 }
 
 int target_num(const int *array, const int length)

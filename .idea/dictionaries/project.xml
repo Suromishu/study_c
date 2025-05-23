@@ -2,6 +2,8 @@
   <dictionary name="project">
     <words>
       <w>Mishu</w>
+      <w>strcat</w>
+      <w>strcpy</w>
     </words>
   </dictionary>
 </component>
